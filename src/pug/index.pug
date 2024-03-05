@@ -1,0 +1,53 @@
+include components/mixin
+include components/menu
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/styles.css")
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
+       
+    body 
+        img(src="img/testing/misocial.png", alt="" ).testing
+        header.baner-heder
+            +printMenu(menuitems) 
+            .menu-burger
+            p.text-size SOCIAL MARKETING & ANALYTICS
+            h1.text-big Pricing Table
+            p.text-small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+            a.btn-arrow
+       
+        main
+            section.main-box 
+                p.text-size MIsocial
+                h2.text-big Select a Plan
+                p.text-small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+                .card-container 
+                    +printPersonal(personal)
+            section.hero
+                p.text-size SOCAL MARKETING & ANALYTICS
+                h2.text-big Take control of your data
+                .hero-container
+                    a.button(href="#") explore features
+                    a.button(href="#") explore features
+        footer
+            +printMenu(menuitems)
+            hr
+            .social-box
+                p © 2017 Mass Impressions & Tranmautritam. Make the right impression.
+                .social 
+                    a 
+                        img(src="img/social/fb.svg", alt="")
+                    a 
+                        img(src="img/social/google.svg", alt="")
+                    a 
+                        img(src="img/social/tw.svg", alt="")
+                    a 
+                        img(src="img/social/inst.svg", alt="")
+        script(src="js/scripts.js") 

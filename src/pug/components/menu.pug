@@ -1,0 +1,36 @@
+- 
+    let menuitems = [
+        {
+            name:"Home",
+            url:"#"
+        },
+        {
+            name:"Why MISOCIAL",
+            url:"#"
+        },
+        {
+            name:"Features",
+            url:"#"
+        },
+        {
+            name:"Articles",
+            url:"#"
+        },
+        {
+            name:"Pricing",
+            url:"#"
+        }
+    ];
+
+mixin printMenu(items)
+    .menu-box
+        a.logo(href="#") 
+            img.logo-img(src="img/logo.png", alt="logo")
+            span.logo-text MY  MISOCIAL 
+        ul.menu
+            for item in items
+                li.menu-item
+                    a.menu-item-link(href=item.url) #{item.name}
+            li.menu-item 
+                        a(href="#").menu-btn-heder get started
+        

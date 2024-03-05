@@ -1,0 +1,37 @@
+- 
+    let personal = [
+        {
+            img: "img/cards/freetarif.png",
+            caption: "personal",
+            price: 0 ,
+            text : "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat." ,
+            buttonURL : "#"
+        },
+        {
+            img: "img/cards/litetarif.png",
+            caption: "personal",
+            price: 23 ,
+            text : "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat." ,
+            buttonURL : "#"
+        },
+        {
+            img: "img/cards/standarttarif.png",
+            caption: "personal",
+            price: 49 ,
+            text : "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat." ,
+            buttonURL : "#"
+        }
+    ];
+
+mixin printPersonal (items)
+    for item in items
+        .card
+            img(src=item.img, alt=item.caption).card-img
+            h3.card-heder  #{item.caption}
+            p.card-price
+                sup $
+                | #{item.price}
+                sub /month
+            p.card-text #{item.text} 
+            a.button(href=item.buttonURL) select plan
+           
